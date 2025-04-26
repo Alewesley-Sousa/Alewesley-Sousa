@@ -1,0 +1,5 @@
+ligar
+mariadbd-safe -u root &
+
+entrar no mysql
+mysql -u root -p
