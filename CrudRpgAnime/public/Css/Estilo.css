@@ -1,0 +1,215 @@
+/* === ESTILOS GERAIS COMPARTILHADOS === */
+
+/* Efeito de fade-in para a página */
+body {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in forwards;
+    background-color: #f8f9fa;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* Container principal */
+.container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    animation: slideUp 0.5s ease-out;
+}
+
+/* Títulos */
+h1 {
+    color: #343a40;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h1:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    height: 3px;
+    background: linear-gradient(to right, #dc3545, #ffc107);
+    border-radius: 3px;
+}
+
+/* Formulários e inputs */
+.form-control, .form-select {
+    border-radius: 8px;
+    padding: 12px 15px;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+.form-label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 8px;
+}
+
+/* Botões */
+.btn {
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: all 0.3s;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background-color: #4e73df;
+    border-color: #4e73df;
+}
+
+.btn-primary:hover {
+    background-color: #3a5ec0;
+    border-color: #3a5ec0;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5c636a;
+    border-color: #5c636a;
+    transform: translateY(-2px);
+}
+
+.btn-warning {
+    background-color: #f6c23e;
+    border-color: #f6c23e;
+    color: #fff;
+}
+
+.btn-warning:hover {
+    background-color: #dda20a;
+    border-color: #dda20a;
+    color: #fff;
+}
+
+.btn-danger {
+    background-color: #e74a3b;
+    border-color: #e74a3b;
+}
+
+.btn-danger:hover {
+    background-color: #c03526;
+    border-color: #c03526;
+}
+
+/* Imagens */
+.img-thumbnail {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    max-height: 150px;
+    max-width: 100px;
+}
+
+.img-thumbnail:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Efeitos de texto */
+.typing-effect {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 1s steps(40, end);
+}
+
+/* Mensagens */
+.alert {
+    margin-bottom: 20px;
+}
+
+/* Tags */
+.badge-tag {
+    display: block;
+    margin: 5px auto 0;
+    width: fit-content;
+}
+
+/* Efeitos de hover */
+.mb-3:hover .form-label {
+    color: #dc3545;
+}
+
+/* Barra superior estilizada */
+.container::before {
+    content: "";
+    display: block;
+    height: 4px;
+    background: linear-gradient(90deg, 
+        #ff3366 0%,
+        #4e73df 30%,
+        #f6c23e 60%,
+        #e74a3b 100%
+    );
+    margin-bottom: 20px;
+    border-radius: 2px;
+}
+
+/* Footer */
+footer.gramado-rpg {
+    all: initial;
+    display: block !important;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: url('/../imagens/gramado-textura.jpg') repeat-x bottom center;
+    background-size: auto 100%;
+    z-index: 100;
+    animation: mover-gramado 20s linear infinite;
+}
+
+@keyframes mover-gramado {
+    from { background-position: 0 bottom; }
+    to { background-position: -1000px bottom; }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        margin-top: 20px;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+}
