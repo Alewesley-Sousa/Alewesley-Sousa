@@ -157,6 +157,24 @@
                 font-size: 1.8rem;
             }
         }
+
+		footer {
+		    position: fixed;
+		    bottom: 0;
+		    left: 0;
+		    width: 100%;
+		    margin: 0;
+		    padding: 0;
+		    overflow: hidden; /* Garante que a imagem não ultrapasse os limites */
+		}
+		
+		.rodape {
+		    width: 100%;
+		    display: block;
+		    margin: 0;
+		    padding: 0;
+		    object-fit: cover; /* Opcional: mantém a proporção cobrindo toda a área */
+		}
     </style>
 </head>
 <body>
@@ -260,7 +278,9 @@
             </div>
         </form>
     </div>
-    
+    <footer>
+    	<img src="/../../public/Imagens/Rodape.png" alt="rodape" class="rodape">
+    </footer>
     <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>

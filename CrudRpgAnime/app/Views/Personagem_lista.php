@@ -8,9 +8,23 @@
     <link href="/../../public/Css/Estilo.css" rel="stylesheet">
     <style>
 		/* Adicione no seu <style> */
+		
 		body {
 		    opacity: 0;
 		    animation: fadeIn 1s ease-in forwards;
+		    background-color: #444444;
+		    background-image: url('/../../public/Imagens/shelong.png');
+		    background-size: cover;
+		    background-position: center;
+		    background-repeat: no-repeat;
+		    background-attachment: fixed;
+		    margin: 0;
+		    padding: 0;
+		    min-height: 100vh;
+		    position: relative;
+		}
+		
+
 		}
 		
 		@keyframes fadeIn {
@@ -83,10 +97,34 @@
             margin: 10px 0;
             display: inline-block;
         }
+        
+		footer {
+		    position: fixed;
+		    bottom: 0;
+		    left: 0;
+		    width: 100%;
+		    height: auto;
+		    z-index: 1000;
+		    margin: 0;
+		    padding: 0;
+		}
+		
+		.rodape {
+		    width: 100%;
+		    display: block;
+		    margin: 0;
+		    padding: 0;
+		}
+		#p {
+		    background: linear-gradient(to right, #cccccc,#bbbbbb);
+		    border: 1px black solid;
+		    margin-bottom: 80px; /* Espaço extra para o rodapé */
+		    padding-bottom: 20px;
+		}
     </style>
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="container mt-5" id="p">
         <h1 class="mb-4">Lista de Personagem</h1>
         
         <?php if (isset($_SESSION['message'])): ?>
@@ -166,7 +204,9 @@
         </table>
     </div>
 
-    <footer class="gramado-rpg"></footer>
+    <footer>
+    	<img src="/../../public/Imagens/Rodape.png" alt="rodape" class="rodape">
+    </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 	<script>

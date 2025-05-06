@@ -3,11 +3,11 @@
 define('APP_PATH', dirname(__DIR__));
 
 // Parseia a URL
-$url = isset($_GET['url']) ? explode('/', trim($_GET['url'], '/')) : ['personagem', 'criar'];
+$url = isset($_GET['url']) ? explode('/', trim($_GET['url'], '/')) : ['personagem', 'lista'];
 
 // Define o controlador padrão se não existir na URL
 $controllerName = isset($url[0]) ? ucfirst($url[0]) . 'Controller' : 'PersonagemController';
-$acao = isset($url[1]) ? $url[1] : 'criar';
+$acao = isset($url[1]) ? $url[1] : 'lista';
 
 // Verifica se o arquivo do controlador existe
 $controllerFile = "app/Controllers/{$controllerName}.php";
