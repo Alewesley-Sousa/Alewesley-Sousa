@@ -1,0 +1,21 @@
+.rodape {
+	position: fixed; /* Fixa a imagem na tela */
+	bottom: 0; /* Posiciona a imagem na parte inferior */
+	left: 0; /* Alinha a imagem à esquerda */
+	width: 100%; /* Faz a imagem ocupar toda a largura da tela */
+	z-index: 1000; /* Garante que a imagem fique acima de outros elementos */
+}
+
+body {
+
+    background-image: url('/../../public/Imagens/shelong.png');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+	background-color: #031A00;
+}

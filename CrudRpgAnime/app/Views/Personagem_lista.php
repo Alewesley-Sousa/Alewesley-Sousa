@@ -7,54 +7,138 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="/../../public/Css/Estilo.css" rel="stylesheet">
     <style>
-		/* Adicione no seu <style> */
-		
-		body {
-		    opacity: 0;
-		    animation: fadeIn 1s ease-in forwards;
-		    background-color: #444444;
-		    background-image: url('/../../public/Imagens/shelong.png');
-		    background-size: cover;
-		    background-position: center;
-		    background-repeat: no-repeat;
-		    background-attachment: fixed;
-		    margin: 0;
-		    padding: 0;
-		    min-height: 100vh;
-		    position: relative;
-		}
-		
+        #p {
+            background: linear-gradient(to right, #eee, #bbbbbb);
+            border: 1px solid black;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
 
-		}
-		
-		@keyframes fadeIn {
-		    to { opacity: 1; }
-		}
-        .img-thumbnail { max-width: 100px; max-height: 100px; }
-        .container { padding-bottom: 50px; }
+        #p h1 {
+            color: #032800;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 30px !important;
+            position: relative;
+            padding-bottom: 15px;
+            font-weight: 900;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
         
+        #p h1:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 25%;
+            width: 50%;
+            height: 6px;
+            background: linear-gradient(to right, #14CD07, #138606);
+            border-radius: 3px;
+        }
+
+        /* Melhorias na tabela */
+        .table {
+            border-collapse: separate;
+            border-spacing: 0;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .table thead th {
+            background-color: #032800;
+            color: white;
+            font-weight: 800;
+            padding: 12px;
+            text-align: center;
+            vertical-align: middle;
+            border: none;
+        }
+
+        .table tbody tr {
+            transition: all 0.2s ease;
+        }
+
+        .table tbody tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        .table tbody td {
+            padding: 10px;
+            vertical-align: middle;
+            border-bottom: 5px solid #dee2e6;
+        }
+
+        /* Melhorias nas imagens */
+        .img-thumbnail {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 1px solid white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Melhorias nos badges de nível */
+        .badge-tag {
+            display: inline-block;
+            margin-top: 5px;
+            padding: 4px 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 12px;
+        }
+
         /* Efeitos de animação */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
-        }
-        .table-loading { opacity: 0; animation: fadeIn 0.5s ease forwards; }
-        .table-row-loading { opacity: 0; transform: translateY(20px); }
-        
-        /* Efeitos de interação */
-        .table tbody tr { transition: all 0.3s ease; }
-        .table tbody tr:hover { background-color: rgba(0,0,0,0.02); }
-        
-        /* Tags de status */
-        .badge-tag { 
-        	display: block;
-		    margin: 5px auto 0;
-		    width: fit-content;
+        } 
+
+        .table-loading {
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards;
         }
 
-        /* Estilos para o modal de confirmação */
+        .table-row-loading {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        /* Estilos para o modal de confirmação (existente) */
+        .confirm-modal {
+            border: 3px solid #0CBA00;
+            background-color: #1a1a1a;
+            color: #fff;
+            box-shadow: 0 0 20px rgba(14, 215, 0, 0.6);
+            border-radius: 10px;
+        }
+
+        .confirm-modal .modal-header {
+            background: linear-gradient(to right, #12B506, #0B7903);
+            border-bottom: 2px solid #ffcc00;
+        }
+
+        .confirm-modal .modal-body {
+            background-color: #2d2d2d;
+            text-align: center;
+        }
+
+        .confirm-modal .btn-danger {
+            background-color: #dc3545;
+            border-color: #ffcc00;
+            transition: all 0.3s;
+        }
+
+        .confirm-modal .btn-danger:hover {
+            background-color: #a71d2a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
         .pixel-img {
-            image-rendering: -moz-crisp-edges;
             image-rendering: pixelated;
             width: 150px;
             height: 150px;
@@ -63,32 +147,9 @@
             margin: 0 auto;
             display: block;
         }
-        .confirm-modal {
-            border: 3px solid #dc3545;
-            background-color: #1a1a1a;
-            color: #fff;
-            box-shadow: 0 0 20px rgba(220, 53, 69, 0.6);
-        }
-        .confirm-modal .modal-header {
-            background: linear-gradient(to right, #dc3545, #8b0000);
-            border-bottom: 2px solid #ffcc00;
-        }
-        .confirm-modal .modal-body {
-            background-color: #2d2d2d;
-            text-align: center;
-        }
-        .confirm-modal .btn-danger {
-            background-color: #dc3545;
-            border-color: #ffcc00;
-            transition: all 0.3s;
-        }
-        .confirm-modal .btn-danger:hover {
-            background-color: #a71d2a;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
+
         .character-name {
-            font-family: 'Courier New', monospace;
+            font-family: 'Arial', monospace;
             font-size: 1.2rem;
             background-color: #000;
             color: #ffcc00;
@@ -97,35 +158,31 @@
             margin: 10px 0;
             display: inline-block;
         }
+        #editar {
+        	transition: all 0.3s;
+        }
         
-		footer {
-		    position: fixed;
-		    bottom: 0;
-		    left: 0;
-		    width: 100%;
-		    height: auto;
-		    z-index: 1000;
-		    margin: 0;
-		    padding: 0;
-		}
-		
-		.rodape {
-		    width: 100%;
-		    display: block;
-		    margin: 0;
-		    padding: 0;
-		}
-		#p {
-		    background: linear-gradient(to right, #cccccc,#bbbbbb);
-		    border: 1px black solid;
-		    margin-bottom: 80px; /* Espaço extra para o rodapé */
-		    padding-bottom: 20px;
-		}
+        #editar:hover {
+        	background-color: #D27102;
+        	transform: translateY(-3px);
+        	font-weight: 700;
+        }
+        
+        #excluir {
+        	transition: all 0.3s;
+        }
+        
+        #excluir:hover {
+        	background-color: #980E04;
+        	transform: translateY(-3px);
+        	font-weight: 700;
+        }
     </style>
 </head>
 <body>
     <div class="container mt-5" id="p">
         <h1 class="mb-4">Lista de Personagem</h1>
+        <div class="styled-line"></div>
         
         <?php if (isset($_SESSION['message'])): ?>
             <div class="alert alert-<?= htmlspecialchars($_SESSION['message']['type']) ?>">
@@ -141,20 +198,20 @@
             <div class="col-md-3">
                 <input type="text" id="animeFilter" class="form-control" placeholder="Filtrar por anime...">
             </div>
-			<div class="col-md-2">
-			    <select id="nivelFilter" class="form-select">
-			        <option value="">Todos níveis</option>
-			        <option value="1">Novato (1+)</option>
-			        <option value="6">Aprendiz (5+)</option>
-			        <option value="11">Pré-Veterano (10+)</option>
-			        <option value="26">Veterano (25+)</option>
-			        <option value="31">Pré-Mestre (30+)</option>
-			        <option value="51">Mestre (50+)</option>
-			        <option value="61">Pós-Mestre (60+)</option>
-			        <option value="76">Ancião (75+)</option>
-			        <option value="100">SUPREMACIA (100)</option>
-			    </select>
-			</div>
+            <div class="col-md-2">
+                <select id="nivelFilter" class="form-select">
+                    <option value="">Todos níveis</option>
+                    <option value="1">Novato (1+)</option>
+                    <option value="6">Aprendiz (5+)</option>
+                    <option value="11">Pré-Veterano (10+)</option>
+                    <option value="26">Veterano (25+)</option>
+                    <option value="31">Pré-Mestre (30+)</option>
+                    <option value="51">Mestre (50+)</option>
+                    <option value="61">Pós-Mestre (60+)</option>
+                    <option value="76">Ancião (75+)</option>
+                    <option value="100">SUPREMACIA (100)</option>
+                </select>
+            </div>
             <div class="col-md-2">
                 <button id="resetFilters" class="btn btn-outline-secondary">Limpar</button>
             </div>
@@ -163,51 +220,56 @@
             </div>
         </div>
         
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>Anime</th>
-                    <th>Descrição</th>
-                    <th>Nivel</th>
-                    <th>Vida</th>
-                    <th>Mana</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($Personagens as $personagem): ?>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
                     <tr>
-                        <td>
-                            <?php if (!empty($personagem['IMAGEM'])): ?>
-                                <img src="data:image/jpeg;base64,<?= base64_encode($personagem['IMAGEM']) ?>" class="img-thumbnail">
-                            <?php else: ?>
-                                <span class="text-muted">Sem imagem</span>
-                            <?php endif; ?>
-                        </td>
-                        <td><?= htmlspecialchars($personagem['ID']) ?></td>
-                        <td><?= htmlspecialchars($personagem['NOME']) ?></td>
-                        <td><?= htmlspecialchars($personagem['ANIME']) ?></td>
-                        <td><?= htmlspecialchars($personagem['DESCRICAO']) ?></td>
-                        <td><?= htmlspecialchars($personagem['NIVEL']) ?></td>
-                        <td><?= htmlspecialchars($personagem['VIDA']) ?></td>
-                        <td><?= htmlspecialchars($personagem['MANA']) ?></td>
-                        <td>
-                            <a href="/CrudRpgAnime/personagem/editar?id=<?= $personagem['ID'] ?>" class="btn btn-sm btn-warning">Editar</a>
-                            <a href="/CrudRpgAnime/personagem/apagar?id=<?= $personagem['ID'] ?>" class="btn btn-sm btn-danger btn-delete">Excluir</a>
-                        </td>
+                        <th>Avatar</th>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Anime</th>
+                        <th>Descrição</th>
+                        <th>Nível</th>
+                        <th>Vida</th>
+                        <th>Mana</th>
+                        <th>Ações</th>
                     </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    <?php foreach ($Personagens as $personagem): ?>
+                        <tr>
+                            <td>
+                                <?php if (!empty($personagem['IMAGEM'])): ?>
+                                    <img src="data:image/jpeg;base64,<?= base64_encode($personagem['IMAGEM']) ?>" class="img-thumbnail">
+                                <?php else: ?>
+                                    <div class="img-thumbnail bg-secondary d-flex align-items-center justify-content-center text-white">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                                        </svg>
+                                    </div>
+                                <?php endif; ?>
+                            </td>
+                            <td><?= htmlspecialchars($personagem['ID']) ?></td>
+                            <td><?= htmlspecialchars($personagem['NOME']) ?></td>
+                            <td><?= htmlspecialchars($personagem['ANIME']) ?></td>
+                            <td><?= htmlspecialchars($personagem['DESCRICAO']) ?></td>
+                            <td>
+                                <span><?= htmlspecialchars($personagem['NIVEL']) ?></span>
+                            </td>
+                            <td><?= htmlspecialchars($personagem['VIDA']) ?></td>
+                            <td><?= htmlspecialchars($personagem['MANA']) ?></td>
+                            <td>
+                                <div class="d-flex gap-2">
+                                    <a href="/CrudRpgAnime/personagem/editar?id=<?= $personagem['ID'] ?>" class="btn btn-sm btn-warning" id="editar">Editar</a>
+                                    <a href="/CrudRpgAnime/personagem/apagar?id=<?= $personagem['ID'] ?>" class="btn btn-sm btn-danger btn-delete" id="excluir">Excluir</a>
+                                </div>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
     </div>
-
-    <footer>
-    	<img src="/../../public/Imagens/Rodape.png" alt="rodape" class="rodape">
-    </footer>
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 	<script>
 	document.addEventListener('DOMContentLoaded', function() {
@@ -337,5 +399,8 @@
 	    });
 	});
 	</script>
+
+    <img src="\../..\public\Imagens\Rodape.png" alt="rodape" class="rodape">
+
 </body>
 </html>
