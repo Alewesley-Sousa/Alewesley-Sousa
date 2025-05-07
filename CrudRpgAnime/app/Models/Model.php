@@ -4,10 +4,10 @@ class Model {
     protected $db;
 
     public function __construct() {
-        $host = "0.0.0.0:3306";
+        $host = "localhost";
         $dbname = "rpg_anime";
         $usuario = "root";
-        $senha = "root";
+        $senha = "";
 
         try {
             $this->db = new PDO("mysql:host=$host; dbname=$dbname; charset=utf8", $usuario, $senha);

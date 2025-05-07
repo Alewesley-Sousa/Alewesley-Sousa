@@ -3,19 +3,30 @@
 	bottom: 0; /* Posiciona a imagem na parte inferior */
 	left: 0; /* Alinha a imagem à esquerda */
 	width: 100%; /* Faz a imagem ocupar toda a largura da tela */
-	z-index: 1000; /* Garante que a imagem fique acima de outros elementos */
+	 /* Garante que a imagem fique acima de outros elementos */
+     z-index: 0;
+     /* padding-bottom: ; */
 }
 
 body {
-
-    background-image: url('/../../public/Imagens/shelong.png');
-
+    
+    background-image: url('/CrudRpgAnime/public/Imagens/Shenlong_Desktop.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor preta com 50% de opacidade */
+    background-blend-mode: darken;
     margin: 0;
     padding: 0;
+    padding-bottom: 60px;
     min-height: 100vh;
-	background-color: #031A00;
+    opacity: 0.85;
+
+}
+
+@media (max-width: 768px) {
+    body {
+        background-image: url('/CrudRpgAnime/public/Imagens/Shenlong_Mobile.png');
+    }
 }

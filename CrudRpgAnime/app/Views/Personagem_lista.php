@@ -5,14 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Personagem</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/../../public/Css/Estilo.css" rel="stylesheet">
+    <link href="/CrudRpgAnime/public/Css/Estilo.css" rel="stylesheet">
     <style>
+        .descricao {
+            min-width: 300px;
+        }
+        .descricao-container {
+        max-height: 200px; /* Limite de altura */
+        overflow-y: auto; /* Rolagem vertical */
+        word-wrap: break-word; /* Quebra de palavras longas */
+        }
         #p {
             background: linear-gradient(to right, #eee, #bbbbbb);
             border: 1px solid black;
             border-radius: 20px;
             padding: 20px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            z-index: 10;
+            position: relative;
         }
 
         #p h1 {
@@ -36,7 +46,18 @@
             background: linear-gradient(to right, #14CD07, #138606);
             border-radius: 3px;
         }
+        #nomeFilter, 
+        #animeFilter, 
+        #nivelFilter {
+            transition: all 0.6s;
+        }
 
+        #nomeFilter:hover, 
+        #animeFilter:hover, 
+        #nivelFilter:hover {
+            border-color: #14CD07; /* Cor verde */
+            box-shadow: 0 0 5px #14CD07;
+        }
         /* Melhorias na tabela */
         .table {
             border-collapse: separate;
@@ -62,7 +83,7 @@
         }
 
         .table tbody tr:hover {
-            background-color: #f8f9fa;
+            background-color:rgb(219, 219, 219);
         }
 
         .table tbody td {
@@ -73,8 +94,8 @@
 
         /* Melhorias nas imagens */
         .img-thumbnail {
-            width: 70px;
-            height: 70px;
+            width: 100px;
+            height: 100px;
             object-fit: cover;
             border-radius: 20px;
             border: 1px solid white;
@@ -114,22 +135,26 @@
             color: #fff;
             box-shadow: 0 0 20px rgba(14, 215, 0, 0.6);
             border-radius: 10px;
+            opacity: 1;
         }
 
         .confirm-modal .modal-header {
             background: linear-gradient(to right, #12B506, #0B7903);
             border-bottom: 2px solid #ffcc00;
+            opacity: 1;
         }
 
         .confirm-modal .modal-body {
             background-color: #2d2d2d;
             text-align: center;
+            opacity: 1;
         }
 
         .confirm-modal .btn-danger {
             background-color: #dc3545;
             border-color: #ffcc00;
             transition: all 0.3s;
+            opacity: 1;
         }
 
         .confirm-modal .btn-danger:hover {
@@ -157,6 +182,7 @@
             border-radius: 4px;
             margin: 10px 0;
             display: inline-block;
+
         }
         #editar {
         	transition: all 0.3s;
@@ -252,7 +278,11 @@
                             <td><?= htmlspecialchars($personagem['ID']) ?></td>
                             <td><?= htmlspecialchars($personagem['NOME']) ?></td>
                             <td><?= htmlspecialchars($personagem['ANIME']) ?></td>
-                            <td><?= htmlspecialchars($personagem['DESCRICAO']) ?></td>
+                            <td class="descricao">
+                                <div class="descricao-container">
+                                    <?= htmlspecialchars($personagem['DESCRICAO']) ?>
+                                </div>
+                            </td>
                             <td>
                                 <span><?= htmlspecialchars($personagem['NIVEL']) ?></span>
                             </td>
@@ -368,7 +398,7 @@
 	                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
 	                        </div>
 	                        <div class="modal-body">
-	                            <img src="/public/imagens/goku-pixel.png" 
+	                            <img src="/CrudRpgAnime/public/imagens/goku-pixel.png" 
 	                                 class="pixel-img mb-3" 
 	                                 alt="Goku Pixel Art">
 	                            <h6>Você está excluindo:</h6>
@@ -400,7 +430,7 @@
 	});
 	</script>
 
-    <img src="\../..\public\Imagens\Rodape.png" alt="rodape" class="rodape">
+    <img src="\CrudRpgAnime\public\Imagens\Rodape.png" alt="rodape" class="rodape">
 
 </body>
 </html>
