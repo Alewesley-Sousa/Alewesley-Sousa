@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Personagem</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/CrudRpgAnime/public/Css/Estilo.css" rel="stylesheet">
+    <link href="/../../public/Css/Estilo.css" rel="stylesheet">
     <style>
         .descricao {
             min-width: 300px;
@@ -430,7 +430,7 @@
 	});
 	</script>
 
-    <img src="\CrudRpgAnime\public\Imagens\Rodape.png" alt="rodape" class="rodape">
+    <img src="\../..\public\Imagens\Rodape.png" alt="rodape" class="rodape">
 
 </body>
 </html>

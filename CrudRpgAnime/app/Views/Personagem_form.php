@@ -7,7 +7,7 @@
     
     <!-- CSS Externo -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/../../public/Css/Estilo.css" rel="stylesheet">
+    <link href="/CrudRpgAnime/public/Css/Estilo.css" rel="stylesheet">
     
     <style>
         /* === ESTILOS GERAIS === */
@@ -38,12 +38,14 @@
         .container {
             max-width: 800px;
             background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             padding: 30px;
             margin-top: 50px;
             margin-bottom: 50px;
             animation: slideUp 0.5s ease-out;
+            position: relative;
+            z-index: 10;
         }
         
         /* === ESTILOS DO TÍTULO === */
@@ -63,7 +65,7 @@
             left: 25%;
             width: 50%;
             height: 3px;
-            background: linear-gradient(to right, #dc3545, #ffc107);
+            background: linear-gradient(to right, #14CD07, #148606);
             border-radius: 3px;
         }
         
@@ -137,7 +139,7 @@
         
         /* === EFEITOS INTERATIVOS === */
         .mb-3:hover .form-label {
-            color: #dc3545;
+            color: #14CD07;
         }
         
         .typing-effect {
@@ -175,6 +177,29 @@
 		    padding: 0;
 		    object-fit: cover; /* Opcional: mantém a proporção cobrindo toda a área */
 		}
+		
+		#NOME:Hover,
+		#ANIME:hover,
+		#DESCRICAO:hover,
+		#NIVEL:hover,
+		#VIDA:hover,
+		#MANA:hover{
+			box-shadow: none;
+			box-shadow: 0 0 5px #14CD07;
+			border-color: #14CD07;
+		}
+		
+		form-control:hover + .form-label {
+			color: #14CD07;
+		}
+		#NOME,
+		#ANIME,
+		#DESCRICAO,
+		#NIVEL,
+		#VIDA,
+		#MANA {
+			transition: 0.5s;
+		}
     </style>
 </head>
 <body>
@@ -198,21 +223,21 @@
             <div class="mb-3">
                 <label for="NOME" class="form-label">Nome</label>
                 <input type="text" class="form-control" id="NOME" name="NOME" 
-                       value="<?= htmlspecialchars($personagem['NOME'] ?? '') ?>" required>
+                       value="<?= htmlspecialchars($personagem['NOME'] ?? '') ?>" placeholder="nome do seu personagem"required>
             </div>
             
             <!-- Campo Anime -->
             <div class="mb-3">
                 <label for="ANIME" class="form-label">Anime</label>
                 <input type="text" class="form-control" id="ANIME" name="ANIME" 
-                       value="<?= htmlspecialchars($personagem['ANIME'] ?? '') ?>" required>
+                       value="<?= htmlspecialchars($personagem['ANIME'] ?? '') ?>" placeholder="anime do seu personagem" required>
             </div>
             
             <!-- Campo Descrição -->
             <div class="mb-3">
                 <label for="DESCRICAO" class="form-label">Descrição</label>
                 <textarea class="form-control" id="DESCRICAO" name="DESCRICAO" rows="4"
-                          style="min-height: 120px;"><?= htmlspecialchars($personagem['DESCRICAO'] ?? '') ?></textarea>
+                          style="min-height: 120px;" placeholder="pode falar brevemente sobre o personagem em relação ao anime. pode falar das habilidades e etc..."><?= htmlspecialchars($personagem['DESCRICAO'] ?? '') ?></textarea>
             </div>
             
             <!-- Seção de Atributos (Nível, Vida, Mana) -->
@@ -220,22 +245,22 @@
                 <div class="col-md-4 mb-3">
                     <label for="NIVEL" class="form-label">Nível</label>
                     <input type="number" class="form-control" id="NIVEL" name="NIVEL" 
-                           value="<?= htmlspecialchars($personagem['NIVEL'] ?? '1') ?>" 
-                           min="1" max="100" required>
+                           value="<?= htmlspecialchars($personagem['NIVEL'] ?? '') ?>" 
+                           min="1" max="100" placeholder="1 - 100" required>
                 </div>
                 
                 <div class="col-md-4 mb-3">
                     <label for="VIDA" class="form-label">Vida</label>
                     <input type="number" class="form-control" id="VIDA" name="VIDA" 
-                           value="<?= htmlspecialchars($personagem['VIDA'] ?? '1') ?>" 
-                           min="1" max="100" required>
+                           value="<?= htmlspecialchars($personagem['VIDA'] ?? '') ?>" 
+                           min="1" max="100" placeholder="1 - 100" required>
                 </div>
                 
                 <div class="col-md-4 mb-3">
                     <label for="MANA" class="form-label">Mana</label>
                     <input type="number" class="form-control" id="MANA" name="MANA" 
-                           value="<?= htmlspecialchars($personagem['MANA'] ?? '1') ?>" 
-                           min="1" max="100" required>
+                           value="<?= htmlspecialchars($personagem['MANA'] ?? '') ?>" 
+                           min="1" max="100" placeholder="1 - 100" required>
                 </div>
             </div>
             
