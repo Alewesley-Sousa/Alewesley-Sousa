@@ -8,7 +8,7 @@
 
 ## Desenvolvedor Backend | Especialista em PHP e Laravel
 
---
+---
 
 ### 🖋️ Sobre mim
 
@@ -34,11 +34,7 @@ Sou um desenvolvedor focado em alta disponibilidade, combino a flexibilidade do 
 ---
 
 ### 📊 Estatísticas & Atividade
-<p align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=Alewesley-Sousa&show_icons=true&theme=radical&include_all_commits=true&count_private=true" alt="Estatísticas do GitHub" />
-  <br/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Alewesley-Sousa&layout=compact&langs_count=7&theme=radical" alt="Linguagens mais usadas" />
-</p>
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Alewesley-Sousa)](https://github.com/anuraghazra/github-readme-stats)
 ---
 
 ### 📫 Vamos nos conectar?
