@@ -48,13 +48,12 @@ Sou um desenvolvedor focado em alta disponibilidade, combino a flexibilidade do 
   height="200"
   src="https://github-readme-stats-three-sooty-40.vercel.app/api/top-langs/?username=Alewesley-Sousa&theme=tokyonight&layout=compact&custom_title=Tecnologias" />
 </p>
-<br/>
-
+<br clear="all"/>
 
 ---
 
 ### 📫 Vamos nos conectar?
-<p align="left">
+<p>
 <a href="https://linkedin.com/in/SEU-USUARIO" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
 <a href="mailto:alewesley.dev@gmail.com"><img src="https://img.shields.io/badge/-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
 </p>
