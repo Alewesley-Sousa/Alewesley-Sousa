@@ -34,7 +34,23 @@ Sou um desenvolvedor focado em alta disponibilidade, combino a flexibilidade do 
 ---
 
 ### 📊 Estatísticas & Atividade
-[![Anurag's GitHub stats](github-readme-stats-three-sooty-40.vercel.app)](https://github.com/Alewesley-Sousa/github-readme-stats)
+<p>
+<img
+  align="left"
+  alt="Github Status"
+  height="200"
+  style="padding-rigth; 10px;"
+  src="https://github-readme-stats-three-sooty-40.vercel.app/api?username=Alewesley-Sousa&show_icons=true&theme=tokyonight&include_all_commits=true&locale=pt-br" />
+
+<img
+  align="left"
+  alt="Github Status"
+  height="200"
+  src="https://github-readme-stats-three-sooty-40.vercel.app/api/top-langs/?username=Alewesley-Sousa&theme=tokyonight&layout=compact&custom_title=Tecnologias" />
+</p>
+<br/>
+
+
 ---
 
 ### 📫 Vamos nos conectar?
